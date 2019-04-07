@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_NonSe
 // @namespace    Leitstellenspiel
-// @version      10.3.4
+// @version      10.3.5
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -63,7 +63,7 @@
     const defaultPostToChat = false; // Set to 'false', to disable default post in alliance chat.
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - alles gemäß Regeln.',
+    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair.',
                              '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
                       '[EVENT] %ESZ% - Hat offen zu bleiben bis %MY_CUSTOM_TIME2% !!!',

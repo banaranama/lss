@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_Se
 // @namespace    Leitstellenspiel
-// @version      10.3.4
+// @version      10.3.5
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -90,7 +90,7 @@
     const displayYear = false;
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - alles gemäß Regeln.',
+    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair.',
                              '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
                       '%ADDRESS% - %FRE0%',
@@ -434,19 +434,4 @@ const credarr = JSON.parse('{"0": {"patienten": "0","gefangene": "0","credits": 
     initButtons();
     notHappyDay();
     initKeys();
-})();
-// ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        http://*/*
-// @grant        none
-// ==/UserScript==
-
-(function() {
-    'use strict';
-
-    // Your code here...
 })();
