@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_NonSe
 // @namespace    Leitstellenspiel
-// @version      10.3.5
+// @version      10.3.6
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -66,13 +66,13 @@
     const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair.',
                              '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
-                      '[EVENT] %ESZ% - Hat offen zu bleiben bis %MY_CUSTOM_TIME2% !!!',
+                      '[EVENT] %ESZ% - Hat offen zu bleiben bis %MY_CUSTOM_TIME3% !!!',
                       '%ADDRESS% - %FRE0%',
                       '%ESZ% - %ADDRESS% - %FRE%',
-                      '%ESZ% - %ADDRESS% - %CRE% - Regeln !!!', // Default
-                      '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME4%',
-                      '%ESZ% - %ADDRESS% - %CRE% - RD NUR durch mich - Regeln !!!',
-                      '%ESZ% - %ADDRESS% - %CRE% - RD frei - Regeln !!!',
+                      '%ESZ% - %ADDRESS% - %CRE% - frei zum verdienen.', // Default
+                      '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
+                      '%ESZ% - %ADDRESS% - %CRE% - RD durch mich.',
+                      '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei.',
                       // '%ESZ% - Offen bis %MY_CUSTOM_TIME%. RD NUR durch mich - alles gemäß Regeln !!!',
                       // '%ESZ% - Unterstützung in %ADDRESS% benötigt. Offen bis %MY_CUSTOM_TIME%.',
                       '%ESZ% - %CRE% - EILT !!! Weitere Kräfte in %ADDRESS% benötigt.',
@@ -80,7 +80,7 @@
                       'EILT !!! Hummel in %ADDRESS% benötigt.',
                       // '%REQUIRED_VEHICLES% in %ADDRESS% noch benötigt',
                       // 'EILT !!! %REQUIRED_VEHICLES% in %ADDRESS% noch benötigt'];
-                      '+++ Gesponsorte GSL --- kein ELW 2 vor %MY_CUSTOM_TIME4% !!!'];
+                      '+++ Gesponsorte GSL --- kein ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
     const addMessages = []; // Messages to add to storage
 
     // Create Button and add event listener
@@ -282,7 +282,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.3.4 NonSend)';
+            const vers = '(10.3.6 NonSend)';
 
             var creds, cstr;
 
