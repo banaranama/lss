@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_NonSe
 // @namespace    Leitstellenspiel
-// @version      10.3.6
+// @version      10.3.7
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -73,14 +73,10 @@
                       '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
                       '%ESZ% - %ADDRESS% - %CRE% - RD durch mich.',
                       '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei.',
-                      // '%ESZ% - Offen bis %MY_CUSTOM_TIME%. RD NUR durch mich - alles gemäß Regeln !!!',
-                      // '%ESZ% - Unterstützung in %ADDRESS% benötigt. Offen bis %MY_CUSTOM_TIME%.',
-                      '%ESZ% - %CRE% - EILT !!! Weitere Kräfte in %ADDRESS% benötigt.',
+                      '%ESZ% - %CRE% - EILT ! Weitere Kräfte in %ADDRESS% benötigt.',
                       'EILT !!! RTH in %ADDRESS% benötigt.',
                       'EILT !!! Hummel in %ADDRESS% benötigt.',
-                      // '%REQUIRED_VEHICLES% in %ADDRESS% noch benötigt',
-                      // 'EILT !!! %REQUIRED_VEHICLES% in %ADDRESS% noch benötigt'];
-                      '+++ Gesponsorte GSL --- kein ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
+                      '+++ PGSL --- kein ELW & ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
     const addMessages = []; // Messages to add to storage
 
     // Create Button and add event listener
@@ -282,7 +278,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.3.6 NonSend)';
+            const vers = '(10.3.7 NonSend)';
 
             var creds, cstr;
 
