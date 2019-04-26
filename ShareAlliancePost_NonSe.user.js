@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_NonSe
 // @namespace    Leitstellenspiel
-// @version      10.3.7
+// @version      10.3.7a
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -63,19 +63,16 @@
     const defaultPostToChat = false; // Set to 'false', to disable default post in alliance chat.
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair.',
+    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair, frei zum verdienen.', // Default
                              '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
-                      '[EVENT] %ESZ% - Hat offen zu bleiben bis %MY_CUSTOM_TIME3% !!!',
+                             '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt, RD frei - %PATIENTS_LEFT% Patienten 🚒.',
+                      '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
                       '%ADDRESS% - %FRE0%',
                       '%ESZ% - %ADDRESS% - %FRE%',
-                      '%ESZ% - %ADDRESS% - %CRE% - frei zum verdienen.', // Default
                       '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
                       '%ESZ% - %ADDRESS% - %CRE% - RD durch mich.',
                       '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei.',
-                      '%ESZ% - %CRE% - EILT ! Weitere Kräfte in %ADDRESS% benötigt.',
-                      'EILT !!! RTH in %ADDRESS% benötigt.',
-                      'EILT !!! Hummel in %ADDRESS% benötigt.',
                       '+++ PGSL --- kein ELW & ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
     const addMessages = []; // Messages to add to storage
 
@@ -278,7 +275,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.3.7 NonSend)';
+            const vers = '(10.3.7a NonSend)';
 
             var creds, cstr;
 
