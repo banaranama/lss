@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_Se
 // @namespace    Leitstellenspiel
-// @version      10.3.7a
+// @version      10.3.8
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -12,7 +12,9 @@
 (() => {
     'use strict';
 
-    var creds, cstr, cstring;
+    var creds, cstr, cstring, kleincreds;
+    
+    kleincreds = 3000; // Grenze ab wann im Chat verlinkt
 
     function notHappyDay (){
         let HD = new Date();
@@ -303,7 +305,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.3.7a)';
+            const vers = '(10.3.8)';
 
             var creds, cstr;
 
@@ -324,6 +326,14 @@ const credarr = JSON.parse('{"0": {"patienten": "0","gefangene": "0","credits": 
                 const m_id2_s = clslc.slice(0, cr_i);
                 const m_id2 = parseInt(m_id2_s);
                 creds = m_id2;
+            }
+            
+            if (creds < kleincreds) {
+                
+              $('.alert_notify_alliance2_br').hide();
+              $('#openAllianceShareOptions2_br').hide();
+              $('.alert_notify_alliance2_bl').hide();
+              $('#openAllianceShareOptions2_bl').hide();
             }
 
             if (creds <= 999) {
