@@ -14,7 +14,7 @@
 
     var creds, cstr, cstring;
 
-    let klein = 3000;  // Grenze aber der im Allychat postbar (roter Button)
+    let klein = 2500;  // Grenze aber der im Allychat postbar (roter Button)
 
     function notHappyDay (){
 
