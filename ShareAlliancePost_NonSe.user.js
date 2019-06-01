@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_NonSe
 // @namespace    Leitstellenspiel
-// @version      10.3.7a
+// @version      10.3.8
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -66,7 +66,7 @@
     const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair, frei zum verdienen.', // Default
                              '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
-                             '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt, RD frei - %PATIENTS_LEFT% Patienten 🚒.',
+                             '%ESZ% - %CRE% - Weitere Kräfte und RD für %PATIENTS_LEFT% Patienten 🚒 benötigt. %ADDRESS%',
                       '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
                       '%ADDRESS% - %FRE0%',
                       '%ESZ% - %ADDRESS% - %FRE%',
@@ -275,7 +275,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.3.7a NonSend)';
+            const vers = '(10.3.8 NonSend)';
 
             var creds, cstr;
 
