@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_Se
 // @namespace    Leitstellenspiel
-// @version      10.4.1
+// @version      10.4.0
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -314,7 +314,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.4.1)';
+            const vers = '(10.4.0)';
 
            // var creds, cstr;
 
@@ -358,10 +358,6 @@ const credarr = JSON.parse('{"0": {"patienten": "0","gefangene": "0","credits": 
             let address = adr;
             const patientsLeft = addressAndPatrientRow.length === 2 ? addressAndPatrientRow[1] : 0;
             
-            if (patientsLeft < 1) {
-                patientsLeft = 'alle';
-            }
-
             const aDate = new Date();
 
             // Prepare values for %AKTDATE%
