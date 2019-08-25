@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_Se
 // @namespace    Leitstellenspiel
-// @version      10.4.0
+// @version      10.4.1
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -314,7 +314,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.4.0)';
+            const vers = '(10.4.1)';
 
            // var creds, cstr;
 
@@ -382,7 +382,12 @@ const credarr = JSON.parse('{"0": {"patienten": "0","gefangene": "0","credits": 
 
             for(let i = 0; i<Messages.length; i++){
                 Messages[i] = Messages[i].replace('%ADDRESS%', address);
-                Messages[i] = Messages[i].replace('%PATIENTS_LEFT%', patientsLeft);
+                if(patientsLeft>=1){
+                  Messages[i] = Messages[i].replace('%PATIENTS_LEFT%', patientsLeft);
+                    }
+                if(patientsLeft<1){
+                  Messages[i] = Messages[i].replace('%PATIENTS_LEFT%', 'ALLE');
+                    }
                 Messages[i] = Messages[i].replace('%REQUIRED_VEHICLES%', requiredVehicles);
                 Messages[i] = Messages[i].replace('%ESZ%', 'ESZ: ' + AD);
                 Messages[i] = Messages[i].replace('%EIL%', 'EILT !!!');
