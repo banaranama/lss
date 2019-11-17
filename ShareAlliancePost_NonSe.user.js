@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_NonSe
 // @namespace    Leitstellenspiel
-// @version      10.4.1
+// @version      10.4.2
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -63,8 +63,8 @@
     const defaultPostToChat = false; // Set to 'false', to disable default post in alliance chat.
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair, frei zum verdienen.', // Default
-                             '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
+    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - ⚠️ RD mache ich selbst. ⚠️ Einsatz frei zum verdienen.', // Default
+                             '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei für Alle. 🚒 Einsatz frei zum verdienen..',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte und RD für %PATIENTS_LEFT% Patienten 🚒 benötigt. %ADDRESS%',
                       '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
@@ -275,7 +275,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.4.1 NonSend)';
+            const vers = '(10.4.2 NonSend)';
 
             var creds, cstr;
 
@@ -354,7 +354,6 @@
                 Messages[i] = Messages[i].replace('%EIL%', 'EILT !!!');
                 Messages[i] = Messages[i].replace('%CRE%', '' + cstr);
                 Messages[i] = Messages[i].replace('%FRE%', 'Frei zum Mitverdienen gemäß Regeln !!!');
-                Messages[i] = Messages[i].replace('%FRE0%', ' 🚨 ' + cstr + ' - ⚠️ Bittte zuerst die benötigten Fz schicken. ⚠️');
                 // Messages[i] = Messages[i].replace('%FZ1%', 'Jeder nur 1 Fahrzeug');
                 Messages[i] = Messages[i].replace('%FZ1%', 'Denkt an Eure Mitspieler');
                 Messages[i] = Messages[i].replace('%AKTDATE%', AD);
