@@ -102,17 +102,17 @@
     const displayYear = false;
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - spielt fair, frei zum verdienen.', // Default
+    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - frei zum verdienen.', // Default
                              '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte und RD für %PATIENTS_LEFT% Patienten 🚒 benötigt. %ADDRESS%',
-                      '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
+//                      '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
                       '%ADDRESS% - %FRE0%',
                       '%ESZ% - %ADDRESS% - %FRE%',
-                      '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
+//                      '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
                       '%ESZ% - %ADDRESS% - %CRE% - RD durch mich.',
                       '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei.',
-                      '+++ PGSL --- kein ELW & ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
+                      '+++ PGSL --- kein AB ELW/ELW & ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
     const addMessages = []; // Messages to add to storage
 
     // Create Button and add event listener
