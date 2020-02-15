@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_Se
 // @namespace    Leitstellenspiel
-// @version      10.4.1
+// @version      10.4.2
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -102,13 +102,13 @@
     const displayYear = false;
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - frei zum verdienen.', // Default
+    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - frei zum verdienen und zufahren.', // Default
                              '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte und RD für %PATIENTS_LEFT% Patienten 🚒 benötigt. %ADDRESS%',
 //                      '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
-                      '%ADDRESS% - %FRE0%',
-                      '%ESZ% - %ADDRESS% - %FRE%',
+//                      '%ADDRESS% - %FRE0%',
+//                      '%ESZ% - %ADDRESS% - %FRE%',
 //                      '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
                       '%ESZ% - %ADDRESS% - %CRE% - RD durch mich.',
                       '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei.',
