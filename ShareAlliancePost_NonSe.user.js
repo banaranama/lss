@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_NonSe
 // @namespace    Leitstellenspiel
-// @version      10.4.2
+// @version      10.4.3
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -63,17 +63,17 @@
     const defaultPostToChat = false; // Set to 'false', to disable default post in alliance chat.
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - ⚠️ RD mache ich selbst. ⚠️ Einsatz frei zum verdienen.', // Default
-                             '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei für Alle. 🚒 Einsatz frei zum verdienen..',
+    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - frei zum verdienen und zufahren.', // Default
+                             '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
                              '%ESZ% - %CRE% - Weitere Kräfte und RD für %PATIENTS_LEFT% Patienten 🚒 benötigt. %ADDRESS%',
-                      '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
-                      '%ADDRESS% - %FRE0%',
-                      '%ESZ% - %ADDRESS% - %FRE%',
-                      '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
+//                      '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
+//                      '%ADDRESS% - %FRE0%',
+//                      '%ESZ% - %ADDRESS% - %FRE%',
+//                      '%ESZ% - kein ELW 1 + ELW 2 vor %MY_CUSTOM_TIME5%',
                       '%ESZ% - %ADDRESS% - %CRE% - RD durch mich.',
                       '%ESZ% - %ADDRESS% - %CRE% - 🚒 RD frei.',
-                      '+++ PGSL --- kein ELW & ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
+                      '+++ PGSL --- kein AB ELW/ELW & ELW 2 vor %MY_CUSTOM_TIME6% !!!'];
     const addMessages = []; // Messages to add to storage
 
     // Create Button and add event listener
@@ -275,7 +275,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.4.2 NonSend)';
+            const vers = '(10.4.3 NonSend)';
 
             var creds, cstr;
 
