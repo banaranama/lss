@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_Se
 // @namespace    Leitstellenspiel
-// @version      10.4.2
+// @version      10.4.3
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -314,7 +314,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.4.1)';
+            const vers = '(10.4.3)';
 
            // var creds, cstr;
 
