@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ShareAlliancePost_Se
 // @namespace    Leitstellenspiel
-// @version      10.4.3
+// @version      10.4.31
 // @author       NewEarth, x_Freya_x, jalibu (Original), JuMaHo (Original)
 // @include      https://www.leitstellenspiel.de/missions/*
 // @grant        GM_setValue
@@ -36,6 +36,15 @@
             $('.alert_notify_alliance2_bl').hide();
             $('#openAllianceShareOptions2_bl').hide();
         }
+        
+               
+        if (((H >= 2055) && (H <= 2205))) {
+            $('.alert_notify_alliance2_br').hide();
+            $('#openAllianceShareOptions2_br').hide();
+            $('.alert_notify_alliance2_bl').hide();
+            $('#openAllianceShareOptions2_bl').hide();
+        }
+        
     }
 
     function notklein (){
@@ -102,9 +111,9 @@
     const displayYear = false;
     const useMessageStorage = false;
     var Messages = [];
-    const defaultMessages = ['%ESZ% - %ADDRESS% - %CRE% - frei zum verdienen und zufahren.', // Default
-                             '%ESZ% - %CRE% - 🚒 RD für %PATIENTS_LEFT% Patienten in %ADDRESS% benötigt.',
-                             '%ESZ% - %CRE% - Weitere Kräfte in %ADDRESS% benötigt.',
+    const defaultMessages = ['🚒 RD @ALL', // Default
+                             '🚒 RD mache ich selbst.',
+                             '🚒 RD ist für @---',
                              '%ESZ% - %CRE% - Weitere Kräfte und RD für %PATIENTS_LEFT% Patienten 🚒 benötigt. %ADDRESS%',
 //                      '[EVENT] %ESZ% - BITTE offen lassen bis %MY_CUSTOM_TIME3% !!!',
 //                      '%ADDRESS% - %FRE0%',
@@ -314,7 +323,7 @@
     const transformMessages = () => {
         try {
 
-            const vers = '(10.4.3)';
+            const vers = '(10.4.31)';
 
            // var creds, cstr;
 
